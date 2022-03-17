@@ -10,11 +10,6 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 // require("dotenv").config();
 
-// Import Routes and ?Models
-const indexRouter = require("./routes/index");
-const notesRouter = require("./routes/notes");
-const loginRouter = require("./routes/login");
-const registerRouter = require("./routes/register");
 
 // Models
 // const noteModel=require("./models/note");
@@ -37,10 +32,10 @@ app.set("layout", "layouts/layout");
 // Database connection END
 
 // Route Handlers
-app.use("/", indexRouter);
-app.use("/login", loginRouter);
-app.use("/register", registerRouter);
-app.use("/notes", notesRouter);
+app.use("/", require("./routes/index"));
+app.use("/login", require("./routes/auth"));
+app.use("/register", require("./routes/auth"));
+app.use("/notes", require("./routes/notes"));
 
 // Run server
 app.listen(process.env.PORT || 3000);

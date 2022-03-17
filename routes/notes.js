@@ -11,7 +11,6 @@ const connectionString = {
   useNewUrlParser: true,
 };
 
-// require("dotenv").config();
 
 // mongoose.connect(process.env.MONGO_NOTES_URI, () => {
 //   console.log("Connected with database notes!");
@@ -34,15 +33,15 @@ router.get("/", async (req, res) => {
 
 router.get("/alldb", async (req, res) => {
   try {
-    await mongoose.connect(process.env.AIRBNB_DB_URI, connectionString);
-    console.log("Connection established");
-    const conn = mongoose.connection;
+    // await mongoose.connect(process.env.MONGO_URI_2, connectionString);
+    // console.log("Connection established");
+    // const conn = mongoose.connection;
     // const db = 
     res.send(`Noice`);
   } catch (error) {
     console.error(error);
   } finally {
-    mongoose.disconnect();
+    // await mongoose.disconnect();
     console.log("Disconnected Successfully!");
   }
 });

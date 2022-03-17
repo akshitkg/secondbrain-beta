@@ -1,1 +1,30 @@
-Login here
+<head>
+  <%-include('../partials/head')%>
+</head>
+
+<div class="mb-3">
+  <form class="form control" action="/login" method="POST">
+    <section>
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        autocomplete="username"
+        required
+        autofocus
+      />
+    </section>
+    <section>
+      <label for="current-password">Password</label>
+      <input
+        type="password"
+        id="current-password"
+        name="password"
+        autocomplete="current-password"
+        required
+      />
+    </section>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+  </form>
+</div>
