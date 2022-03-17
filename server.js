@@ -23,27 +23,16 @@ const registerRouter = require("./routes/register");
 // const homeRouter=require('/')
 
 // Middlewares
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(bodyParser.urlencoded({ extended: false, limit: "10mb" }));
 app.use(express.static(__dirname + "public"));
+app.use(express.json());
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.set("layout", "layouts/layout");
 
 // Database Connection START
 
-// mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true}),
-
-// console.log("Connected!!!");
-// const db = mongoose.connection;
-
-// db.on("error", (error) => {
-//   console.error(error);
-// });
-
-// db.once("open", () => {
-//   console.log("Database connected!");
-// });
 
 // Database connection END
 
