@@ -33,8 +33,8 @@ app.set("layout", "layouts/layout");
 
 // Route Handlers
 app.use("/", require("./routes/index"));
-app.use("/login", require("./routes/auth"));
-app.use("/register", require("./routes/auth"));
+app.use("/login", require("./routes/login"));
+app.use("/register", require("./routes/register"));
 app.use("/notes", require("./routes/notes"));
 
 // Run server

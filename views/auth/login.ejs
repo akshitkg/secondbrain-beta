@@ -2,29 +2,31 @@
   <%-include('../partials/head')%>
 </head>
 
+<h1>Login</h1>
+
 <div class="mb-3">
   <form class="form control" action="/login" method="POST">
     <section>
-      <label for="username">Username</label>
+      <label for="email">Email</label>
       <input
-        type="text"
-        id="username"
-        name="username"
-        autocomplete="username"
+        type="email"
+        id="email"
+        name="email"
         required
         autofocus
       />
     </section>
     <section>
-      <label for="current-password">Password</label>
+      <label for="password">Password</label>
       <input
         type="password"
-        id="current-password"
+        id="password"
         name="password"
-        autocomplete="current-password"
         required
       />
     </section>
-    <button type="submit" class="btn btn-primary">Sign In</button>
+    <button type="submit" class="btn btn-primary">Login</button>
   </form>
 </div>
+
+<a href="/register">Register</a>
